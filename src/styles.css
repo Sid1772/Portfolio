@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+a:hover{
+    cursor: pointer;
+}

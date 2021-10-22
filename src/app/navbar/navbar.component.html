@@ -1,0 +1,25 @@
+<nav >
+  
+    
+    <div class="links">
+        <div  class="home">
+            <a (click)="route('home')" class="fa fa-home" aria-hidden="true"></a>
+        </div>
+        <div (click)="openMenu()" class="hamburger">
+            <i [class.menu]="isMenuOpen" class="fa fa-bars" aria-hidden="true"></i>
+            <i [class.menu]="isMenuOpen" class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul [class.open]="isMenuOpen" class="list">
+            <li class="list-items"><a (click)="route('about-me')">About</a></li>
+            <li class="list-items"><a (click)="route('projects')">Projects</a></li>
+            <li class="list-items"><a (click)="route('contact-me')">Contact</a></li>
+        </ul>
+        <div class="quote" *ngIf="isMenuOpen">Programming isnt't about what you know its about what you can figure out</div>
+        <div *ngIf="isMenuOpen" class="contacts">
+           <a [href]="config.Github" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i></a>
+           <a [href]="config.LinkedIn"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+
+        </div>
+    </div>
+  
+</nav>

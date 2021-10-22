@@ -1,0 +1,155 @@
+.fa-linkedin {
+  color: #0077b5;
+}
+.contact {
+  height: 50vh;
+  width: 100%;
+  background-image: url("src\assets\img\contact.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+}
+.contact > span {
+  font-size: 2rem;
+  color: white;
+}
+.tiles {
+  display: flex;
+  justify-content: space-around;
+  padding: 2vw;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+.fa-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: black;
+}
+.email {
+  text-decoration: underline;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 2px;
+  background: black;
+  position: relative;
+}
+.email:hover {
+  background: #f2ebeb;
+  color: black;
+}
+.e {
+  padding: 5px;
+}
+.mailer {
+  position: absolute;
+  transform: translateY(-110%);
+  width: 100%;
+  height: 100%;
+}
+.mailsent {
+  margin-top: 10%;
+}
+span::selection {
+  background-color: white;
+  color: black;
+}
+.tile {
+  height: 200px;
+  width: 400px;
+  flex-grow: 1;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(180deg, #5e625e, #423838);
+  color: white;
+  border-radius: 20px;
+  padding: 2%;
+  box-shadow: grey 20px aliceblue;
+  box-shadow: 7px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+.copied {
+  position: absolute;
+  top: 55%;
+}
+.copy {
+  display: none;
+}
+a {
+  color: white;
+  cursor: pointer;
+}
+a:hover {
+  transform: scale(120%);
+}
+.email:hover > .copy {
+  display: block;
+  position: absolute;
+  top: -100%;
+  color: white;
+}
+.mailme {
+  cursor: pointer;
+  font-size: 20px;
+  border: 1px solid;
+  padding: 2px;
+}
+
+.contactdetails {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-around;
+}
+.mailer.sendMail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 1s ease;
+  transform: translateY(-9%);
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.contact-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 1s ease;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.sendMail.contactdetails {
+  transform: translateY(100%);
+  position: absolute;
+  height: 100%;
+  transition: all 1s ease;
+}
+.close {
+  position: absolute;
+  left: 95%;
+  top: 0%;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .tiles {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .tile {
+    width: 80vw;
+  }
+  .contact {
+    background-image: none;
+    background-color: black;
+  }
+}

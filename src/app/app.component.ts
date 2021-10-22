@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {Config} from './app.config'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Portfolio';
+  constructor(){
+  //  if(!confirm("Welcome to my Page Do you want to view a single page portfolio")){
+  //    Config.singlePage=true
+     
+  //  }
+  }
 }

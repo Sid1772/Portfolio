@@ -1,0 +1,49 @@
+.home{
+    background-image: url("src\assets\img\2525222.jpg");
+    height: 90vh;
+    background-size: cover;
+    background-repeat:round ;
+    background-color: rgba(0, 0, 0, 0.589);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+font-size: 3rem;
+}
+.name{
+    font-size: 2.5rem;
+}
+.subtext{
+    font-size: 2rem;
+}
+.portfolio{
+    font-size:1.5rem;
+    background: white;
+    opacity: 70%;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    position: relative;
+    margin-top: 4vh;
+}
+.portfolio::before,.portfolio::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+}
+.portfolio::before{
+    background-image: url("src\assets\img\2525222.jpg");
+    animation: typewriter 2s steps(13) forwards;
+}
+@keyframes typewriter {
+    to{
+        left: 110%;
+    }
+}
