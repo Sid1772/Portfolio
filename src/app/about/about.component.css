@@ -1,9 +1,9 @@
 .about{
-    height: 90vh;
+    height: 100vh;
+    padding-top: 10vh;
     width: 100%;
     background-color: rgb(143, 142, 142);
     background-color: #894325;
-  background: linear-gradient(172deg, rgba(137, 67, 37, 1) 50%, transparent 50%), linear-gradient(8deg, transparent 50%, rgba(233, 233, 233, 233) 50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,6 +15,7 @@
 .quote{
 
     font-style: italic;
+    font-weight: 100;
 }
 .skillicons{
     display: none;
@@ -50,7 +51,12 @@ border: 1px solid;
 margin-right: 2%;
 background: black;
 color: white;
-
+text-align: center;
+padding: 0 2px 0px 2px;
+}
+.skill-box:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 .btn{
     margin: 10px;
@@ -71,6 +77,25 @@ transform: translateX(-50%);
   i.fa-angular {
     color: red;
     background-color: black;
+  }
+  .Angular{
+      background: red;
+      color: white;
+  }
+  .TypeScript{
+
+  }
+  .JavaScript{
+      background: #efd81d;
+      color: black;
+  }
+  .Html{
+      background:#dd4b25 ;
+      color: white;
+  }
+  .CSS{
+      background:#254bdd ;
+      color: white;
   }
   i.fa-js-square {
     color: #efd81d;
@@ -101,10 +126,16 @@ span{
     .button{
       
     }
+    .about{
+        background: #81d5e3 ;
+        
+    }
     .content{
         height: auto;
         width: 80%;
         margin-top: 10px;
+        line-height: 1.7;
+        padding-bottom: 10px;
     }
     .about{
         align-items: flex-start;
@@ -112,11 +143,11 @@ span{
     }
     @media (max-width:600px){
         .skillicons{
-            display: inline-flex;
+           
             gap: 20%;
         }
         .skill-box{
-            display: none;
+          font-size: 0.7rem;
         }
     }
     @media (max-width:476px){

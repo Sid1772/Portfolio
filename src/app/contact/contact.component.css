@@ -115,7 +115,7 @@ a:hover {
   align-items: center;
   gap: 10px;
   transition: all 1s ease;
-  transform: translateY(-9%);
+  transform: translateY(-7%);
   flex-direction: column;
   justify-content: flex-start;
 }

@@ -14,7 +14,15 @@
             <li class="list-items"><a (click)="route('projects')">Projects</a></li>
             <li class="list-items"><a (click)="route('contact-me')">Contact</a></li>
         </ul>
-        <div class="quote" *ngIf="isMenuOpen">Programming isnt't about what you know its about what you can figure out</div>
+        <div class="down">
+        <i class="fas fa-chevron-down"></i>
+        <div class="checkbox">
+            <input #checked (change)="toggleClass(checked.checked)"  type="checkbox" value="" id="flexCheckDefault">
+      <label  for="flexCheckDefault">Single Page Mode</label>
+      </div></div>
+
+       
+        <div class="quote" *ngIf="isMenuOpen">Programming isn't about what you know its about what you can figure out</div>
         <div *ngIf="isMenuOpen" class="contacts">
            <a [href]="config.Github" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i></a>
            <a [href]="config.LinkedIn"> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>

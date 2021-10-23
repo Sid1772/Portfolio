@@ -10,6 +10,7 @@ import{Config} from '../app.config'
 export class NavbarComponent implements OnInit {
 isMenuOpen=false
 config=Config
+isSinglePage=false
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -17,11 +18,32 @@ config=Config
 openMenu(){
   this.isMenuOpen=!this.isMenuOpen
 }
+toggleClass(ev:any){
+  Config.singlePage.next(ev)
+  this.isSinglePage=ev
+  this.configureSinglePage()
+
+}
+configureSinglePage(){
+    if(this.isSinglePage){
+      const route=this.router.url.slice(1)
+      this.router.navigate(['home'])
+      setTimeout(()=>{this.route(route)},500)
+      
+    }
+    else{
+
+    }
+}
 route(routeTo:any){
+  
   if(this.isMenuOpen){
     this.isMenuOpen=false
-    
   }
+  if(!this.isSinglePage){
   this.router.navigate(['/'+routeTo])
 }
+else{
+   this.config.scrolledPage.next(routeTo)
+}}
 }

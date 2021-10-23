@@ -3,6 +3,9 @@ nav{
     width: 100%;
     background: #566f59e3;
     transition: all 1s ease-out;
+    position: fixed;
+    z-index: 5;
+    backface-visibility: hidden;
 }
 .home>a{
     text-decoration: none;
@@ -57,7 +60,51 @@ text-decoration: underline;
 a{
     color: black;
 }
+.checkbox{
+    position: absolute;
+        left: -53%;
+        /* transform: translateX(200%); */
+        background: orange;
+        color: black;
+        width: 300%;
+        transition: all 0.5s ease;
+        line-height: 5vh;
+        opacity: 0;
+        pointer-events: none;
+        
+}
+.down{
+    position: relative;
+    left: 0%;
+    cursor: pointer;
+    height: 10vh;
+    line-height: 10vh;
+    background: orange;
+}
+.down:hover .checkbox,.checkbox:hover{
+    cursor: pointer;
+     transform: translateX(-50%);
+    text-align: center;
+    opacity: 1;
+    pointer-events: all;
+}
 @media  (max-width:768px) {
+    .down{
+        background: transparent;
+    }
+    .checkbox{
+        background: #566f59e3;
+    }
+   
+    .down{
+        left: -15%;
+    }
+    .down:hover .checkbox{
+         transform: translateX(-9%); 
+        opacity: 1;
+        pointer-events: all;
+    }
+    
     .list{
         position: fixed;    
         height: 100vh;

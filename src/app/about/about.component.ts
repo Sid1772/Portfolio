@@ -14,10 +14,16 @@ configpath=Config;
 
   ngOnInit(): void {
   }
-  open(path:string){
+  open(path:any){
     switch(path){
       case 'projects':{
-        this.router.navigate(['/'+path])
+        console.log(Config.singlePage)
+        if(!Config.singlePage.value){
+
+        this.router.navigate(['/'+path])}
+        else{
+          Config.scrolledPage.next(path)
+        }
         break;
       }
       default:{

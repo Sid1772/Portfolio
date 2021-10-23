@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import {Config} from './app.config'
 @Component({
   selector: 'app-root',
@@ -12,5 +13,6 @@ export class AppComponent {
   //    Config.singlePage=true
      
   //  }
+  
   }
 }

@@ -1,8 +1,10 @@
-<div class="home">
+<div id="home" class="home">
     <div class="header">Hii</div>
     <div class="header"> I am </div>
     <div class="name">Sidharth Bhatia</div>
     <p class="subtext">A web developer</p>
-    <div (click)="route()" class="portfolio">Know About me</div>
+    <div (click)="route('about-me')" class="portfolio">Know About me</div>
 </div>
-<!-- <app-contact></app-contact> -->
+<app-about id="about-me" #about *ngIf="isSinglePage"></app-about>
+<app-projects id="projects" #project *ngIf="isSinglePage"></app-projects>
+<app-contact id="contact-me" #contact *ngIf="isSinglePage"></app-contact>
